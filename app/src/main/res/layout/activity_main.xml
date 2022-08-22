@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/main_screen_main_layout_padding"
+    tools:context=".MainActivity"
+    >
+
+    <ImageView
+        android:id="@+id/iv_main"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:padding="5dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/fl_start"
+        android:contentDescription="@string/image"
+        android:src="@drawable/img_main_page"
+        />
+
+    <FrameLayout
+        android:id="@+id/fl_start"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_main"
+        android:background="@drawable/item_color_accent_border_ripple_background">
+
+        <TextView
+            android:id="@+id/tv_startbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="START"
+            android:textSize="@dimen/default_button_text_size"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_gravity="center"
+            />
+
+
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_BMI"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/fl_history"
+        app:layout_constraintTop_toBottomOf="@+id/fl_start"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/item_circular_color_accent_background">
+
+        <TextView
+            android:id="@+id/tv_BMI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BMI"
+            android:textStyle="bold"
+            android:textSize="@dimen/default_button_text_size"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_calculator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Calculator"
+        android:textColor="@color/colorAccent"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/fl_BMI"
+        app:layout_constraintStart_toStartOf="@id/fl_BMI"
+        app:layout_constraintTop_toBottomOf="@id/fl_BMI" />
+
+
+    <FrameLayout
+        android:id="@+id/fl_history"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:layout_constraintStart_toEndOf="@+id/fl_BMI"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fl_start"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@drawable/item_circular_color_accent_background">
+
+        <ImageView
+            android:id="@+id/iv_history"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_calendar"
+            android:layout_gravity="center"
+            />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="History"
+        android:textColor="@color/colorAccent"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/fl_history"
+        app:layout_constraintStart_toStartOf="@id/fl_history"
+        app:layout_constraintTop_toBottomOf="@id/fl_history" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

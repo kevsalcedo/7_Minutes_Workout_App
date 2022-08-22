@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/ll_history_item_main"
+    android:background="#EBEBEB"
+    android:orientation="horizontal"
+    android:padding="15dp"
+    >
+
+    <TextView
+        android:id="@+id/tv_item_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="#212121"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        tools:text="1"
+        />
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textColor="#212121"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        tools:text="DATE"
+        />
+
+    <ImageView
+        android:id="@+id/iv_Delete"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/ic_action_delete"
+        android:contentDescription="image"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        />
+
+</LinearLayout>
